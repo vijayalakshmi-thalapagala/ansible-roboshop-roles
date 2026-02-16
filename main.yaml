@@ -1,6 +1,5 @@
-- name : roles daemon
+- name : roles demo
   hosts: local
   connection: local
   roles: 
   - demo
-  
