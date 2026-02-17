@@ -15,6 +15,6 @@
 
 - name: start user
   ansible.builtin.service:
-    name: catalogue
+    name: user
     state: restarted
     enabled: yes
