@@ -21,13 +21,13 @@
       path: /tmp/{{ component }}.zip
       state: absent
 
-  - name: download catalogue
+  - name: download {{ component }}
     ansible.builtin.get_url:
-      url: https://roboshop-artifacts.s3.amazonaws.com/catalogue-v3.zip 
-      dest: /tmp/catalogue.zip
+      url: https://roboshop-artifacts.s3.amazonaws.com/{{ component }}-v3.zip 
+      dest: /tmp/{{ component }}.zip
 
-  - name: unarchieve catalogue
+  - name: unarchieve {{ component }}
     ansible.builtin.unarchive:
-      src: /tmp/catalogue.zip
+      src: /tmp/{{ component }}.zip
       dest: /app
       remote_src: yes
