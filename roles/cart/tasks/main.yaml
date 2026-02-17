@@ -13,8 +13,8 @@
     name: common
     tasks_from: systemd-setup.yaml
 
-- name: start user
+- name: start cart
   ansible.builtin.service:
-    name: catalogue
+    name: cart
     state: restarted
     enabled: yes
